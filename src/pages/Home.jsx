@@ -7,6 +7,7 @@ function Home() {
   const [listOfDevices, setListOfDevices] = useState({});
   const [listToDownload, setListToDownload] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     getData();
@@ -50,27 +51,35 @@ function Home() {
       <main role="main" className="container">
         <div className="mt-3">
           <div className="jumbotron home-jumbo">
-            <div className="d-flex flex-column align-items-center">
-              <h2>Select some devices, then click</h2>
-              <button
-                className={`download-button btn ml-2 mt-2 ${isButtonDisabled()}`}
-                aria-disabled="true"
-                onClick={() => {
-                  if (listToDownload.length !== 0) {
-                    handleShow();
-                  }
-                }}
-              >
-                Download
-              </button>
-            </div>
+            {error ? (
+              <h2 className="text-center">
+                Hey! The app is down right now. Please try again later!
+              </h2>
+            ) : (
+              <div className="d-flex flex-column align-items-center">
+                <h2>Select some devices, then click</h2>
+                <button
+                  className={`download-button btn ml-2 mt-2 ${isButtonDisabled()}`}
+                  aria-disabled="true"
+                  onClick={() => {
+                    if (listToDownload.length !== 0) {
+                      handleShow();
+                    }
+                  }}
+                >
+                  Download
+                </button>
+              </div>
+            )}
           </div>
-          <TableList
-            tableData={listOfDevices}
-            onRowClick={handleRowClick}
-            onHeaderClick={handleHeaderClick}
-            listToDownload={listToDownload}
-          />
+          {!error && (
+            <TableList
+              tableData={listOfDevices}
+              onRowClick={handleRowClick}
+              onHeaderClick={handleHeaderClick}
+              listToDownload={listToDownload}
+            />
+          )}
           {listToDownload.length !== 0 && (
             <div className="d-flex justify-content-center my-3">
               <button
@@ -159,6 +168,9 @@ function Home() {
         throw new Error("Data not Retrieved");
       }
     } catch (error) {
+      setError(
+        "Hey! Looks like the app is in maintenance. Please try again later."
+      );
       console.error(error);
     }
   }
