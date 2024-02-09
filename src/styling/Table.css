@@ -1,0 +1,71 @@
+.my-custom-scrollbar {
+  position: relative;
+  height: 65vh;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.my-custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Table Styles */
+
+.home-table:hover {
+  cursor: pointer;
+}
+
+.table tbody td:nth-child(2) {
+  background-color: white;
+  text-align: center;
+}
+
+.selected td:nth-child(1) {
+  text-decoration-color: #66d1f4f6 !important;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 5px;
+}
+
+.latest-firmware {
+  text-decoration: underline;
+  text-decoration-color: #50c878bf;
+  text-decoration-thickness: 0.2em;
+  text-underline-offset: 5px;
+}
+
+.tree {
+  overflow: auto;
+}
+
+table {
+  touch-action: manipulation;
+}
+
+.no-top-border {
+  border-top: hidden;
+}
+
+.purple-head {
+  position: sticky;
+  top: 0;
+  background-color: #5056d3fc;
+  color: white;
+  opacity: 1; /* Ensure full opacity */
+  z-index: 2; /* Set an appropriate z-index */
+}
+
+.purple-head:hover {
+  background-color: #6068fafc;
+}
+
+.table-row-styling {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+}
+
+.table-row-styling svg:hover {
+  color: rgb(107, 107, 107);
+}

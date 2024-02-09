@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.home-jumbo {
+  color: #5056d3;
+  padding-top: 20px !important;
+  padding-bottom: 10px !important;
+  width: 100%;
+}
+
+.about-why-jumbo h2 {
+  color: #5056d3;
+}
+
+.about-why-jumbo {
+  padding-top: 20px !important;
+  padding-bottom: 10px !important;
+  width: 80%;
+}
+
+.preset-success::-webkit-input-placeholder {
+  color: #22bb33;
+}
+.preset-warning::-webkit-input-placeholder {
+  color: #bb2124;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1211px) {
+  /*Style*/
+  .about-why-jumbo {
+    padding-top: 20px !important;
+    padding-bottom: 10px !important;
+    width: 100%;
+  }
+}
+
+.modal-confirm .modal-content {
+  padding: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+.modal-confirm .modal-header {
+  background: #5056d3;
+  border-bottom: none;
+  position: relative;
+  text-align: center;
+  margin: -20px -20px 0;
+  border-radius: 5px 5px 0 0;
+  padding: 35px;
+}
+.modal-confirm h4 {
+  text-align: center;
+  font-size: 36px;
+  margin: 10px 0;
+}
+.modal-confirm .form-control,
+.modal-confirm .btn {
+  min-height: 40px;
+  border-radius: 3px;
+}
+
+.modal-confirm.modal-dialog {
+  margin-top: 80px;
+}
+.modal-confirm .btn {
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 6px 20px;
+  min-width: 150px;
+  border: none;
+}
+.modal-confirm .btn:hover,
+.modal-confirm .btn:focus {
+  outline: none;
+}
+.trigger-btn {
+  display: inline-block;
+  margin: 100px auto;
+}
+
+.download-button {
+  width: 50%;
+}
+
+.modalFooter {
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  border-top: 1px solid rgb(229, 229, 229);
+  align-items: baseline;
+  justify-content: flex-end;
+}
