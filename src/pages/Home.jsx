@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TableList from "../components/TableList";
 import DownloadModal from "../components/DownloadModal";
+import PlaceholderTable from "../components/PlaceholderTable";
 
 function Home() {
   const BASEURL = "https://ipswow-backend-c492670a5754.herokuapp.com/";
@@ -8,6 +9,7 @@ function Home() {
   const [listToDownload, setListToDownload] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     getData();
@@ -72,7 +74,8 @@ function Home() {
               </div>
             )}
           </div>
-          {!error && (
+          {isLoading && <PlaceholderTable />}
+          {!error && !isLoading && (
             <TableList
               tableData={listOfDevices}
               onRowClick={handleRowClick}
@@ -159,6 +162,7 @@ function Home() {
   }
 
   async function getData() {
+    setIsLoading(true);
     try {
       const response = await fetch(`${BASEURL}/getdevices/`);
       if (response.ok) {
@@ -173,6 +177,7 @@ function Home() {
       );
       console.error(error);
     }
+    setIsLoading(false);
   }
 
   async function getSpecificDevice(device) {
