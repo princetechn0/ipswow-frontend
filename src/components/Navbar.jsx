@@ -39,7 +39,7 @@ function Navbar() {
           <li className="nav-item">
             <a
               className="nav-link"
-              href="https://www.github.com/princetechn0/IPSWOW"
+              href="https://github.com/princetechn0/ipswow-frontend"
               target="_blank"
               rel="noopener noreferrer"
             >
