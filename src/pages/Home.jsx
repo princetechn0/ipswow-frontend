@@ -4,7 +4,7 @@ import DownloadModal from "../components/DownloadModal";
 import PlaceholderTable from "../components/PlaceholderTable";
 
 function Home() {
-  const BASEURL = "https://ipswow-backend-c492670a5754.herokuapp.co/";
+  const BASEURL = "https://ipswow-backend-c492670a5754.herokuapp.com/";
   const [listOfDevices, setListOfDevices] = useState({});
   const [listToDownload, setListToDownload] = useState([]);
   const [showModal, setShowModal] = useState(false);
