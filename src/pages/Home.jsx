@@ -4,7 +4,7 @@ import DownloadModal from "../components/DownloadModal";
 import PlaceholderTable from "../components/PlaceholderTable";
 
 function Home() {
-  const BASEURL = "https://ipswow-backend-c492670a5754.herokuapp.com/";
+  const BASEURL = "https://ipswow-backend-c492670a5754.herokuapp.co/";
   const [listOfDevices, setListOfDevices] = useState({});
   const [listToDownload, setListToDownload] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -54,9 +54,17 @@ function Home() {
         <div className="mt-3">
           <div className="jumbotron home-jumbo">
             {error ? (
-              <h2 className="text-center">
-                Hey! The app is down right now. Please try again later!
-              </h2>
+              <div className="text-center">
+                <h2 className="text-center">
+                  Hey! The app is down right now. Please try again later!
+                </h2>
+                <a
+                  className="btn btn-dark btn-md rounded-pill border border-light my-3"
+                  href="mailto:appleluvver8@gmail.com?subject=IPSWOW%20Is%20Down&body=Fix%20IPSWOW%20Please!%20"
+                >
+                  Report Error
+                </a>
+              </div>
             ) : (
               <div className="d-flex flex-column align-items-center">
                 <h2>Select some devices, then click</h2>
