@@ -66,7 +66,7 @@ function Home() {
                 </a>
               </div>
             ) : (
-              <div className="d-flex flex-column align-items-center">
+              <div className="d-flex flex-column align-items-center text-center">
                 <h2>Select some devices, then click</h2>
                 <button
                   className={`download-button btn ml-2 mt-2 ${isButtonDisabled()}`}

@@ -1,9 +1,8 @@
-import React from "react";
 import Table from "./Table";
 
 function TableList({ tableData, onRowClick, onHeaderClick, listToDownload }) {
   return (
-    <div className="row shadow-lg p-3 rounded-lg" id="device_tables">
+    <div className="row shadow-lg p-3 rounded-lg">
       {tableData?.devices?.map((deviceType, index) => {
         return (
           <Table

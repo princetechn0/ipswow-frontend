@@ -97,7 +97,7 @@ export default function DownloadModal({
                   type="button"
                   id="button-addon2"
                 >
-                  Download
+                  Save
                 </button>
               </div>
             </div>
